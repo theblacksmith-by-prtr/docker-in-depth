@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kubeops
+  name: kubeops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubeops
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kubeops
+    spec:
+      containers:
+      - image: sikiryl/kubeops-demo
+        name: kubeops-demo
+        resources: {}
+status: {}
